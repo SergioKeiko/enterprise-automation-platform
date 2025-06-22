@@ -1,0 +1,36 @@
+# Чувствительные файлы
+.env
+*.env
+.env.*
+
+# SSL сертификаты и ключи  
+traefik/acme.json
+*.pem
+*.key
+*.crt
+
+# Данные контейнеров
+data/
+qdrant_data/
+uptime-kuma/
+*/data/
+
+# Логи
+*.log
+logs/
+
+# Временные файлы
+*.tmp
+*.bak
+*~
+
+# Бэкапы
+backups/
+*.backup
+
+# Docker volumes
+volumes/
+
+# Системные файлы
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+http:
+  routers:
+    supabase:
+      rule: "Host(`supabase.your-domain.com`)"
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: cloudflare
+      service: supabase
+
+  services:
+    supabase:
+      loadBalancer:
+        servers:
+          - url: "http://supabase-kong:8000"
