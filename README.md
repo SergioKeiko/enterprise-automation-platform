@@ -15,3 +15,44 @@
 - 🛡️ **Cloudflare WAF** - Enterprise security and DDoS protection
 - 📊 **Uptime Kuma** - 24/7 monitoring with SLA reporting
 - 🔄 **Traefik** - Automatic SSL and load balancing
+
+## 🚀 Quick Start
+
+### Prerequisites
+- VPS/Server: 4GB RAM, 50GB storage minimum
+- Domain with DNS management access
+- Cloudflare account for DNS and WAF
+- Docker & Docker Compose installed
+
+### Installation
+
+```bash
+# 1. Clone repository
+git clone https://github.com/SergioKeiko/enterprise-automation-platform.git
+cd enterprise-automation-platform
+
+# 2. Configure environment
+cp .env.example .env
+nano .env  # Edit with your domain and credentials
+
+# 3. Start platform
+docker-compose up -d
+```
+
+### Access Services
+- **n8n Automation**: https://n8n.your-domain.com
+- **Qdrant Vector DB**: https://qdrant.n8n.your-domain.com
+- **Uptime Monitoring**: https://uptime.your-domain.com
+
+## 💼 Professional Services
+
+Need help with deployment or custom automation solutions?
+
+**Contact me for:**
+- 🏗️ Custom deployment and configuration
+- 🔧 Enterprise integrations and workflows
+- 📊 Performance optimization and scaling
+- 🛡️ Security hardening and compliance
+- 📈 Ongoing maintenance and support
+
+**Available on [Upwork](https://www.upwork.com/fl/~017d2e8eb206e2c1ac) for enterprise automation projects.**
