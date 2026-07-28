@@ -1,36 +1,29 @@
-# Чувствительные файлы
+# Secrets — never commit these
 .env
 *.env
-.env.*
+!*.env.example
+!.env.example
 
-# SSL сертификаты и ключи  
-traefik/acme.json
+# Let's Encrypt certificate store (contains private keys)
+n8n-stack/traefik/acme.json
 *.pem
 *.key
 *.crt
 
-# Данные контейнеров
-data/
-qdrant_data/
-uptime-kuma/
-*/data/
+# Runtime data — lives on the server only
+n8n-stack/data/
+n8n-stack/qdrant_data/
+n8n-stack/uptime-kuma/
+supabase/volumes/db/data/
+supabase/volumes/storage/
 
-# Логи
+# Backups & logs
+backups/
 *.log
-logs/
-
-# Временные файлы
-*.tmp
 *.bak
+*.backup
 *~
 
-# Бэкапы
-backups/
-*.backup
-
-# Docker volumes
-volumes/
-
-# Системные файлы
+# OS noise
 .DS_Store
 Thumbs.db

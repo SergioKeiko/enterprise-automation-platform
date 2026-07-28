@@ -1,14 +1,18 @@
 api:
   dashboard: true
+  # Dashboard port 8080 is bound to 127.0.0.1 only (see docker-compose.yml),
+  # so "insecure" here does not expose it to the internet.
   insecure: true
 
 entryPoints:
   web:
     address: ":80"
     forwardedHeaders:
+      # Cloudflare IPv4 ranges — restores real visitor IPs behind the CF proxy.
+      # Source: https://www.cloudflare.com/ips-v4
       trustedIPs:
         - "173.245.48.0/20"
-        - "103.21.244.0/22" 
+        - "103.21.244.0/22"
         - "103.22.200.0/22"
         - "103.31.4.0/22"
         - "141.101.64.0/18"
@@ -45,20 +49,17 @@ entryPoints:
 certificatesResolvers:
   cloudflare:
     acme:
-      email: "your-email@domain.com"
+      # Filled in by scripts/generate-secrets.sh
+      email: "__ACME_EMAIL__"
       storage: /letsencrypt/acme.json
       dnsChallenge:
         provider: cloudflare
         delayBeforeCheck: 0
 
 log:
-  level: DEBUG
-  filePath: "/var/log/traefik.log"
+  level: INFO
 
 providers:
   docker:
     endpoint: "unix:///var/run/docker.sock"
     exposedByDefault: false
-  file:
-    filename: /etc/traefik/dynamic.yml
-    watch: true
