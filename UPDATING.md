@@ -1,5 +1,7 @@
 # Updating
 
+> 🇺🇦 [Українська версія](docs/uk/UPDATING.md)
+
 This template pins **exact image versions** and has no auto-updater. That is a
 feature: an unattended major update of n8n or Postgres can take your production
 workflows down overnight. Updates here are a 5-minute manual ritual you do

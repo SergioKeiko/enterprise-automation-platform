@@ -1,5 +1,7 @@
 # Enterprise Automation Platform
 
+> 🇺🇦 [Українська версія](docs/uk/README.md)
+
 A production-tested, self-hosted automation stack. One €16/month server gives you:
 
 | Service | What it does | Your URL |
@@ -47,7 +49,7 @@ and a one-command secrets generator.
 working stack (~1.5 hours, no DevOps experience required).
 Українська версія: **[docs/uk/INSTALL.md](docs/uk/INSTALL.md)**.
 
-Other guides:
+Other guides (кожен має українську версію в [docs/uk/](docs/uk/)):
 
 - [BACKUP_AND_RESTORE.md](BACKUP_AND_RESTORE.md) — what gets backed up and how to restore
 - [UPDATING.md](UPDATING.md) — how to update service versions safely

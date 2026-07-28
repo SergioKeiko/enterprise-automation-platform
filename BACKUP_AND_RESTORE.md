@@ -1,5 +1,7 @@
 # Backup & Restore
 
+> 🇺🇦 [Українська версія](docs/uk/BACKUP_AND_RESTORE.md)
+
 **The one thing you must understand:** `n8n-stack/data/config.json` contains
 the **n8n encryption key**. Every credential n8n exports is encrypted with it.
 **A credentials backup without this file is garbage.** Both backup scripts

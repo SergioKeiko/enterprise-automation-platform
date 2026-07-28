@@ -1,5 +1,7 @@
 # Troubleshooting
 
+> 🇺🇦 [Українська версія](docs/uk/TROUBLESHOOTING.md)
+
 Every fix below assumes you are logged in to the server:
 `ssh -i ~/.ssh/automation-server root@YOUR_SERVER_IP`
 

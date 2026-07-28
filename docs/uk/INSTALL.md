@@ -260,7 +260,7 @@ docker compose logs traefik | grep -i "certificate" | tail -5
 ```
 
 Без рядків `error`. Якщо помилки — почекай 2 хвилини і перевір ще раз, потім
-дивись [TROUBLESHOOTING.md](../../TROUBLESHOOTING.md#certificates).
+дивись [TROUBLESHOOTING.md](TROUBLESHOOTING.md#certificates).
 
 **7.3.** Відкрий у браузері `https://n8n.YOUR_DOMAIN` — має бути сторінка n8n
 **"Set up owner account"**. Створи акаунт — цей логін і Є захистом твого n8n,
@@ -298,7 +298,7 @@ docker compose ps
 ```
 
 Усі 13 сервісів `Up`, більшість `(healthy)`. Якщо `analytics` чи `kong`
-перезапускаються довше 5 хвилин → [TROUBLESHOOTING.md](../../TROUBLESHOOTING.md#supabase).
+перезапускаються довше 5 хвилин → [TROUBLESHOOTING.md](TROUBLESHOOTING.md#supabase).
 
 **8.2.** Відкрий `https://supabase.YOUR_DOMAIN` — з'явиться вікно логіну.
 Username: `supabase`, пароль: `DASHBOARD_PASSWORD` з кроку 6 (він же у
@@ -376,7 +376,7 @@ ls -lh /root/backups/daily /root/backups/data
 **зовнішні** снапшоти провайдера — Hetzner: сервер → вкладка **Backups** →
 **Enable Backups** (~20% ціни сервера, 7 щоденних снапшотів); DigitalOcean:
 **Backups**; Vultr: **Auto Backups**; AWS: снапшоти EBS.
-Детальніше: [BACKUP_AND_RESTORE.md](../../BACKUP_AND_RESTORE.md).
+Детальніше: [BACKUP_AND_RESTORE.md](BACKUP_AND_RESTORE.md).
 
 ---
 
@@ -397,4 +397,4 @@ ls -lh /root/backups/daily /root/backups/data
 Постав перший монітор в Uptime Kuma (HTTP-монітор на
 `https://n8n.YOUR_DOMAIN`) і збери перший воркфлоу в n8n.
 
-Щось не спрацювало → [TROUBLESHOOTING.md](../../TROUBLESHOOTING.md).
+Щось не спрацювало → [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
